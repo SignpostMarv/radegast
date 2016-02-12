@@ -233,7 +233,7 @@
       <Reference name="OpenMetaverse.StructuredData" localCopy="false"/>
       <Reference name="System.Windows.Forms" localCopy="false"/>
       <Reference name="AIMLbot" path="assemblies" localCopy="true" />
-      <Reference name="Radegast.exe" localCopy="false" />
+      <Reference name="Radegast" localCopy="false" />
       <Files>
         <Match path="." pattern="*.cs" recurse="true" subType="Code">
           <Exclude name="AssemblyInfo.cs"/>
@@ -368,7 +368,7 @@
       <Reference name="OpenMetaverseTypes" localCopy="false"/>
       <Reference name="OpenMetaverse.StructuredData" localCopy="false"/>
 
-      <Reference name="Radegast.exe" localCopy="false" />
+      <Reference name="Radegast" localCopy="false" />
       <Reference name="fmodex-dotnet.dll" />
       <Reference name="System" />
       <Reference name="System.Core"/>
@@ -404,7 +404,7 @@
       <Reference name="OpenMetaverseTypes" localCopy="false"/>\
       <Reference name="OpenMetaverse.StructuredData" localCopy="false"/>
 
-      <Reference name="Radegast.exe" localCopy="false" />
+      <Reference name="Radegast" localCopy="false" />
       <Reference name="Radegast.Plugin.Speech" />
       <Reference name="System" />
       <Reference name="System.Core"/>
@@ -436,7 +436,7 @@
       <Reference name="OpenMetaverseTypes" localCopy="false"/>
       <Reference name="OpenMetaverse.StructuredData" localCopy="false"/>
 
-      <Reference name="Radegast.exe" localCopy="false" />
+      <Reference name="Radegast" localCopy="false" />
       <Reference name="Radegast.Plugin.Speech" />
       <Reference name="Radegast.exe" />
       <Reference name="System" />
@@ -471,7 +471,7 @@
       <Reference name="OpenMetaverseTypes" localCopy="false"/>
       <Reference name="OpenMetaverse.StructuredData" localCopy="false"/>
 
-      <Reference name="Radegast.exe" localCopy="false" />
+      <Reference name="Radegast" localCopy="false" />
       <Reference name="Radegast.Plugin.Speech" />
       <Reference name="Monobjc" path="Assemblies" />
       <Reference name="Monobjc.Cocoa" path="Assemblies" />
