@@ -698,6 +698,7 @@ namespace Radegast
                         if (int.TryParse(rule.Param, out chan) && chan > 0)
                         {
                             string res = string.Empty;
+                            Logger.DebugLog(rule.Option);
                             InventoryNode folder = FindFolder(rule.Option);
                             if (folder != null)
                             {
@@ -709,6 +710,8 @@ namespace Radegast
                                     }
                                 }
                             }
+
+                            Logger.DebugLog("Responding on channel \"" + chan.ToString() + "\" with message: " + res);
                             
                             Respond(chan, res.TrimEnd(','));
                         }
@@ -896,13 +899,23 @@ namespace Radegast
 
         protected InventoryNode FindFolderInternal(InventoryNode currentNode, string currentPath, string desiredPath)
         {
+            if (desiredPath.EndsWith("/"))
+            {
+                desiredPath = desiredPath.Substring(0, desiredPath.Length - 1);
+            }
             if (desiredPath.ToLower() == currentPath.ToLower())
             {
                 return currentNode;
             }
+            Logger.DebugLog("desired: " + desiredPath);
             foreach (var n in currentNode.Nodes.Values)
             {
-                if (n.Data.Name.StartsWith(".")) continue;
+                if (n.Data.Name.StartsWith(".") && n.Data.Name != ".outfits" && n.Data.Name != ".outfits/")
+                {
+                    continue;
+                }
+
+                Logger.DebugLog((currentPath == "/" ? currentPath : currentPath + "/") + n.Data.Name.ToLower());
 
                 var res = FindFolderInternal(n, (currentPath == "/" ? currentPath : currentPath + "/") + n.Data.Name.ToLower(), desiredPath);
                 if (res != null)
